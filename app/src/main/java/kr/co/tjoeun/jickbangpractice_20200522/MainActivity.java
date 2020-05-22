@@ -3,7 +3,10 @@ package kr.co.tjoeun.jickbangpractice_20200522;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -11,6 +14,7 @@ import java.util.List;
 
 import kr.co.tjoeun.jickbangpractice_20200522.adapters.RoomAdapter;
 import kr.co.tjoeun.jickbangpractice_20200522.databinding.ActivityMainBinding;
+import kr.co.tjoeun.jickbangpractice_20200522.datas.DetailRoomActivity;
 import kr.co.tjoeun.jickbangpractice_20200522.datas.Room;
 
 public class MainActivity extends BaseActivity {
@@ -31,6 +35,16 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        binding.roomListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent myIntent = new Intent(mContext, DetailRoomActivity.class);
+                startActivity(myIntent);
+
+            }
+        });
 
     }
 

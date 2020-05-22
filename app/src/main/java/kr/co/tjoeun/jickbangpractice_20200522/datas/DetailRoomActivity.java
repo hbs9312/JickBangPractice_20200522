@@ -1,9 +1,8 @@
 package kr.co.tjoeun.jickbangpractice_20200522.datas;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.os.Bundle;
+
+import androidx.databinding.DataBindingUtil;
 
 import kr.co.tjoeun.jickbangpractice_20200522.BaseActivity;
 import kr.co.tjoeun.jickbangpractice_20200522.R;

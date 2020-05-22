@@ -28,6 +28,7 @@ public class DetailRoomActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
         binding.dialBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

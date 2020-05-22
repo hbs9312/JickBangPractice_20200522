@@ -18,6 +18,18 @@ public class Room {
 
     }
 
+    public String getFormattedFloor() {
+        if (this.floor > 0) {
+            return this.floor + "층";
+        }
+        else if (this.floor < 0) {
+            return String.format("지하 %d층", -this.floor);
+        }
+        else {
+            return "반지하";
+        }
+    }
+
     public Room(int price, String address, int floor, String description) {
         this.price = price;
         this.address = address;

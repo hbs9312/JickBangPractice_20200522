@@ -47,6 +47,7 @@ public class RoomAdapter extends ArrayAdapter<Room> {
 
         Room data = mList.get(position);
         priceTxt.setText(data.getFormattedPrice());
+        addressAndFloorTxt.setText(String.format("%s, %s", data.getAddress(),data.getFormattedFloor()));
         descTxt.setText(data.getDescription());
 
         return row;
